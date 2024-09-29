@@ -362,7 +362,7 @@ def atualiza_filmes(filme):
   genero = filme['gender']
 
   #filme é uma variável que armazena a estrutura correta para salvar o filme no arquivo de filmes
-  filme = f"{titulo},{ano},{genero}\n"
+  filme_estrutura = f"{titulo},{ano},{genero}\n"
 
   #nome_arquivo é uma variável que armazena o nome do arquivo
   nome_arquivo = input("Digite o nome do arquivo: ")
@@ -385,7 +385,7 @@ def atualiza_filmes(filme):
     if verificando_ja_cadastrado:
       print("O filme já está cadastrado no arquivo! ")
     else:
-      arquivo.write(filme)
+      arquivo.write(filme_estrutura)
       print("Filmes salvo com sucesso! ")
     arquivo.close()
   else:
